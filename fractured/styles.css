@@ -1,0 +1,177 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: yellowgreen;
+}
+
+ul
+{
+    margin: 0px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+}
+
+li
+{
+    list-style: none;
+    float: left;
+    font-family: "arial black";
+    font-size: 10em;
+    position: relative;
+    color: transparent;
+}
+
+li::before,li::after
+{
+    content: attr(data-Title);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #262626;
+    overflow: hidden;
+}
+
+
+li:nth-child(1)::before
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    top: -7px;
+    left: -2px;
+}
+li:nth-child(1)::after
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,100% 0, 100% 100%,35% 100%);
+    top: -2px;
+    left: 2px;
+}
+li:nth-child(3)::before
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    top: -7px;
+    left: -2px;
+}
+li:nth-child(3)::after
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,100% 0, 100% 100%,35% 100%);
+    top: -2px;
+    left: 2px;
+}
+li:nth-child(5)::before
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    top: -7px;
+    left: -2px;
+}
+li:nth-child(5)::after
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,100% 0, 100% 100%,35% 100%);
+    top: -2px;
+    left: 2px;
+}
+li:nth-child(7)::before
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    top: -7px;
+    left: -2px;
+}
+li:nth-child(7)::after
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,100% 0, 100% 100%,35% 100%);
+    top: -2px;
+    left: 2px;
+}
+li:nth-child(9)::before
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    top: -7px;
+    left: -2px;
+}
+li:nth-child(9)::after
+{
+    -webkit-clip-path:polygon(55% 0,0 0,0 100%,35% 100%);
+    clip-path:polygon(55% 0,100% 0, 100% 100%,35% 100%);
+    top: -2px;
+    left: 2px;
+}
+li:nth-child(even)::before
+{
+    -webkit-clip-path:polygon(25% 0,0 0,0 100%,75% 100%);
+    clip-path:polygon(25% 0,0 0,0 100%,75% 100%);
+    top: 10px;
+    left: -2px;
+}
+li:nth-child(even)::after
+{
+    -webkit-clip-path:polygon(25% 0,0 0,0 100%,75% 100%);
+    clip-path:polygon(25% 0,100% 0, 100% 100%,75% 100%);
+    top: 2px;
+    left: 2px;
+}
+li:nth-child(even)
+{
+    animation: anime 3s linear infinite;
+}
+li:nth-child(n+1)
+{
+    animation: animeAdd 3s linear infinite;
+}
+
+@keyframes anime
+{
+    0%
+    {
+        transform: rotate(15deg);
+    }
+    25%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(-15deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(15deg);
+    }
+}
+@keyframes animeAdd
+{
+    0%
+    {
+        transform: rotate(-20deg);
+    }
+    25%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(20deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(-20deg);
+    }
+}
